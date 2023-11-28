@@ -12,7 +12,7 @@
 [Steps for deploying Docsify](#Steps-for-deploying-Docsify)
 
 
-# Docsify
+# Introduction
 Docsify is a lightweight, versatile, and user-friendly documentation generator crafted for the seamless creation of polished and sophisticated documentation websites. It streamlines the documentation-building process, offering both simplicity and elegance. Users benefit from a dynamic and swift browsing experience, facilitated by Docsify's operation as a single-page application (SPA). By dynamically loading content on the client side, it ensures rapid navigation, eliminating the need for page reloads. This makes Docsify an ideal choice for efficiently presenting and maintaining documentation with a focus on clarity and responsiveness.
 ## Features of Docsify
 ### Markdown Support
