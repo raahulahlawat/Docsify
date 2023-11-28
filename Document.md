@@ -7,7 +7,7 @@
 
 [Configuration](#Configuration)
 
-[List of Plugins])(#List-of-Plugins)
+[List of Plugins](#List-of-Plugins)
 
 [Steps for deploying Docsify](#Steps-for-deploying-Docsify)
 
