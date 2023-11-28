@@ -1,10 +1,10 @@
 # Table of Content
 [Introduction](#Introduction)
-[Features of Docsify](#Features of Docsify)
-[Step by step guide to installation and Setup](#Step by step guide to installation and Setup)
+[Features of Docsify](#Features-of-Docsify)
+[Step by step guide to installation and Setup](#Step-by-Step-guide-to-installation-and-Setup)
 [Configuration](#Configuration)
-[List of Plugins])(#List of Plugins)
-[Steps for deploying Docsify](#Steps for deploying Docsify)
+[List of Plugins])(#List-of-Plugins)
+[Steps for deploying Docsify](#Steps-for-deploying-Docsify)
 
 
 # Docsify
