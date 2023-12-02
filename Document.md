@@ -55,33 +55,22 @@ Docker with Docsify allows you to containerize your documentation site, making i
 ```
 sudo apt update
 ```
-> Install necessary packages to allow apt to use a repository over HTTPS:
 ```
-sudo apt install -y \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg-agent \
-    software-properties-common
-
+sudo apt upgrade
 ```
-> Add Docker's official GPG key:
+> To install Docker
 ```
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-```
-> Add the Docker repository:
-```echo \
-  "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-```
-> Install Docker:
-```sudo apt update
-sudo apt install -y docker-ce docker-ce-cli containerd.io
+sudo apt install docker.io
 ```
 ### Step 2:
 Verify the installation:
 ```
-sudo docker run hello-world
+sudo docker -v
+```
+### Step 3: 
+> To know the status of docker
+```
+sudo systemctl status docker
 ```
 ### Step 3: Install Node.js
 Docsify requires Node.js and npm (Node Package Manager) to be installed on your system. You can install them using the following commands:
@@ -177,7 +166,7 @@ After the init is complete,you can see the file in the ./docsify subdirectory
 * index.html as the entry file  
 * README.md as the home page  
 
-you can preview your site in your browser on http://localhost:41465.
+you can preview your site in your browser on http://localhost:3000.
 ## Create Dockerfile
 ```
   FROM node:latest
