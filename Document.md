@@ -58,21 +58,19 @@ sudo apt update
 ```
 sudo apt upgrade
 ```
-> To install Docker
+### Step 2: To install Docker
 ```
 sudo apt install docker.io
 ```
-### Step 2:
-Verify the installation:
+### Step 3: Verify the installation:
 ```
 sudo docker -v
 ```
-### Step 3: 
-> To know the status of docker
+### Step 4: To know the status of docker
 ```
 sudo systemctl status docker
 ```
-### Step 3: Install Node.js
+### Step 5: Install Node.js
 Docsify requires Node.js and npm (Node Package Manager) to be installed on your system. You can install them using the following commands:
 
 > To install nodejs
@@ -87,7 +85,7 @@ node -v
 ```
 v12.22.9
 ```
-### Step 4: Install npm
+### Step 6: Install npm
 To install the npm, use the following command:
 ```
 sudo apt install npm
@@ -100,7 +98,7 @@ npm -v
 ```
 8.5.1
 ```
-### Step 5: To install docsify
+### Step 7: To install docsify
 ```
 sudo npm install -g docsify-cli
 ```
