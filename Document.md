@@ -49,8 +49,7 @@ Description:    Ubuntu 22.04.3 LTS
 Release:    22.04
 Codename:   jammy
 ```
-### Step 1: Install Docker
-Docker with Docsify allows you to containerize your documentation site, making it easy to deploy and share. Here's a simple guide on how you can use Docker with Docsify:
+### Step 1: Update Package Lists:
 > Update the package index:
 ```
 sudo apt update
@@ -58,11 +57,14 @@ sudo apt update
 ```
 sudo apt upgrade
 ```
+
+* Docker with Docsify allows you to containerize your documentation site, making it easy to deploy and share. Here's a simple guide on how you can use Docker with Docsify:
+
 ### Step 2: To install Docker
 ```
 sudo apt install docker.io
 ```
-### Step 3: Verify the installation:
+### Step 3: Verify the installation
 ```
 sudo docker -v
 ```
