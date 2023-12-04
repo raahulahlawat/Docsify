@@ -72,6 +72,10 @@ sudo docker -v
 ```
 sudo systemctl status docker
 ```
+> If docker is not activated
+```
+sudo systemctl start docker
+```
 ### Step 5: Install Node.js
 Docsify requires Node.js and npm (Node Package Manager) to be installed on your system. You can install them using the following commands:
 
