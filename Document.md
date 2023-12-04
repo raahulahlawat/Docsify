@@ -64,35 +64,95 @@ sudo apt upgrade
 ```
 sudo apt install docker.io
 ```
+> #### Output:
+> Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  docker-buildx-plugin docker-ce-rootless-extras docker-compose-plugin libslirp0 slirp4netns
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  containerd runc
+Suggested packages:
+  aufs-tools btrfs-progs cgroupfs-mount | cgroup-lite debootstrap docker-doc rinse zfs-fuse | zfsutils
+The following NEW packages will be installed:
+  containerd docker.io runc
+0 upgraded, 3 newly installed, 0 to remove and 1 not upgraded.
+Need to get 69.2 MB of archives.
+After this operation, 265 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 runc amd64 1.1.7-0ubuntu1~22.04.1 [4,249 kB]
+Get:2 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 containerd amd64 1.7.2-0ubuntu1~22.04.1 [36.0 MB]
+Get:3 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 docker.io amd64 24.0.5-0ubuntu1~22.04.1 [28.9 MB]
+Fetched 69.2 MB in 20s (3,461 kB/s)                                                                     
+Preconfiguring packages ...
+Selecting previously unselected package runc.
+(Reading database ... 219414 files and directories currently installed.)
+Preparing to unpack .../runc_1.1.7-0ubuntu1~22.04.1_amd64.deb ...
+Unpacking runc (1.1.7-0ubuntu1~22.04.1) ...
+Selecting previously unselected package containerd.
+Preparing to unpack .../containerd_1.7.2-0ubuntu1~22.04.1_amd64.deb ...
+Unpacking containerd (1.7.2-0ubuntu1~22.04.1) ...
+Selecting previously unselected package docker.io.
+Preparing to unpack .../docker.io_24.0.5-0ubuntu1~22.04.1_amd64.deb ...
+Unpacking docker.io (24.0.5-0ubuntu1~22.04.1) ...
+Setting up runc (1.1.7-0ubuntu1~22.04.1) ...
+Setting up containerd (1.7.2-0ubuntu1~22.04.1) ...
+Setting up docker.io (24.0.5-0ubuntu1~22.04.1) ...
+Processing triggers for man-db (2.10.2-1) ...
 ### Step 3: Verify the installation
 ```
 sudo docker -v
 ```
+> #### Output:
+> Docker version 24.0.5, build 24.0.5-0ubuntu1~22.04.1
+
 ### Step 4: To know the status of docker
 ```
 sudo systemctl status docker
 ```
-> If docker is not activated
+> #### Output:
+> docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2023-12-02 16:33:29 IST; 1min 1s ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 24779 (dockerd)
+      Tasks: 18
+     Memory: 26.7M
+        CPU: 443ms
+     CGroup: /system.slice/docker.service
+             └─24779 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+Dec 02 16:33:28 rahul-ahlawat dockerd[24779]: time="2023-12-02T16:33:28.166246043+05:30" level=info msg=>
+Dec 02 16:33:28 rahul-ahlawat dockerd[24779]: time="2023-12-02T16:33:28.167009795+05:30" level=info msg=>
+Dec 02 16:33:28 rahul-ahlawat dockerd[24779]: time="2023-12-02T16:33:28.239241570+05:30" level=info msg=>
+Dec 02 16:33:28 rahul-ahlawat dockerd[24779]: time="2023-12-02T16:33:28.240932425+05:30" level=info msg=>
+Dec 02 16:33:28 rahul-ahlawat dockerd[24779]: time="2023-12-02T16:33:28.895320053+05:30" level=info msg=>
+Dec 02 16:33:29 rahul-ahlawat dockerd[24779]: time="2023-12-02T16:33:29.011097629+05:30" level=info msg=>
+Dec 02 16:33:29 rahul-ahlawat dockerd[24779]: time="2023-12-02T16:33:29.021909244+05:30" level=info msg=>
+Dec 02 16:33:29 rahul-ahlawat dockerd[24779]: time="2023-12-02T16:33:29.021974638+05:30" level=info msg=>
+Dec 02 16:33:29 rahul-ahlawat dockerd[24779]: time="2023-12-02T16:33:29.051075649+05:30" level=info msg=>
+Dec 02 16:33:29 rahul-ahlawat systemd[1]: Started Docker Application Container Engine.
+
+> #### If docker is not activated
 ```
 sudo systemctl start docker
 ```
 ### Step 5: Install Node.js
 Docsify requires Node.js and npm (Node Package Manager) to be installed on your system. You can install them using the following commands:
 
-> To install nodejs
+> #### To install nodejs
 ```
 sudo apt install nodejs
 ```
-> To check the version,run the following command:
+> #### To check the version,run the following command:
 ```
 node -v
 ```
-> Output:  
-```
-v12.22.9
-```
+> #### Output:
+> v12.22.9
 ### Step 6: Install npm
-To install the npm, use the following command:
+> #### To install the npm, use the following command:
 ```
 sudo apt install npm
 ```
@@ -100,42 +160,33 @@ sudo apt install npm
 ```
 npm -v
 ```
-> Output:
-```
-8.5.1
-```
+> ### Output:
+> 8.5.1
 ### Step 7: To install docsify
 ```
 sudo npm install -g docsify-cli
 ```
-> Output:  
-```
-added 204 packages, and audited 205 packages in 11s
-
+> #### Output:  
+> added 204 packages, and audited 205 packages in 11s
 16 packages are looking for funding
   run `npm fund` for details
-
 7 vulnerabilities (6 moderate, 1 high)
-
 To address issues that do not require attention, run:
   npm audit fix
-
 To address all issues (including breaking changes), run:
   npm audit fix --force
-
 Run `npm audit` for details.
-```
-> To check the version,run the following command:
+
+> #### To check the version,run the following command:
 ```
 docsify -v
 ```
-> Output
-```
-docsify -cli version:
+> #### Output:
+> docsify -cli version:
 4.4.4
-```
-> Create a directory to run the docsify
-To create directory run the following command:
+
+> #### Create a directory to run the docsify
+> To create directory run the following command:
 ```
 mkdir docsify
 ```
@@ -143,29 +194,23 @@ mkdir docsify
 ```
 cd docsify
 ```
-> Output
-```
-rahul@rahul-ahlawat:~/docsify$
-```
+> #### Output
+> rahul@rahul-ahlawat:~/docsify$
 > Initialise the docsify in newly created directory:
 ```
 docsify init ./docsify
 ```
-> Output:
-```
-Initialization succeeded! Please run docsify serve ./docsify
-```
+> #### Output:
+> Initialization succeeded! Please run docsify serve ./docsify
 
-> To run the docsify run the following command:
+> #### To run the docsify run the following command:
 ```
 docsify serve docsify 
 ```
-> Output:
-```
-Serving /home/rahul/docsify/docsify now.
+> #### Output:
+> Serving /home/rahul/docsify/docsify now.
 Listening at http://localhost:41465
 
-```
 After the init is complete,you can see the file in the ./docsify subdirectory
 * index.html as the entry file  
 * README.md as the home page  
